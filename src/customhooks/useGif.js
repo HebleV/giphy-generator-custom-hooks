@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-const API_KEY = process.env.API_KEY_REACT;
 
 const useGif = (tag) => {
   const [gif, setGif] = useState("");
