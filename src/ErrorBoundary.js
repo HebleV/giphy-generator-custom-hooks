@@ -1,11 +1,3 @@
-// import React from 'react'
-
-// import RandomGiphy from "../src/components/RandomGiphy";
-
-// <Sentry.ErrorBoundary fallback={"An error has occurred"}>
-//   <RandomGiphy />
-// </Sentry.ErrorBoundary>;
-
 import React from "react";
 import * as Sentry from "@sentry/react";
 class ErrorBoundary extends React.Component {
@@ -18,8 +10,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
-    console.log(error)
-    console.log(errorInfo)
     Sentry.captureException(error);
     this.setState({ hasError: true });
   }
