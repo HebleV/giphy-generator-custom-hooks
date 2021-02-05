@@ -2,13 +2,15 @@ import React from "react";
 import useGif from "../customhooks/useGif";
 
 const RandomGiphy = () => {
-  const { gif, fetchGif } = useGif();
-
+  const { gif, fetchGifs } = useGif();
+  const throwError = () => {
+    throw new Error("Sample Error !!!");
+  }
   return (
     <div className="container">
       <h1>random Giphy</h1>
       <img src={gif} width="500" alt="randomgifs" />
-      <button onClick={fetchGif}>New Gif</button>
+      <button onClick={throwError}>New Gif</button>
     </div>
   );
 };
