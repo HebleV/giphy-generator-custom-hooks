@@ -2,7 +2,7 @@ import React from "react";
 import useGif from "../customhooks/useGif";
 
 const RandomGiphy = () => {
-  const { gif, fetchGifs } = useGif();
+  const { gif } = useGif();
   const throwError = () => {
     throw new Error("Sample Error !!!");
   }
